@@ -1,0 +1,540 @@
+$accent_primary: #14acac;
+$accent_secondary: #14A989;
+
+/**
+ * -------------------------------------------------------------------------------------
+ * General
+ * -------------------------------------------------------------------------------------
+ */
+
+body {
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+}
+
+.bg-light {
+    background-color: #f1f1f1 !important;
+}
+
+.btn-accent {
+    background-color: $accent_primary;
+}
+
+.btn-outline-accent {
+  color: $accent_primary;
+  border-color: $accent_primary;
+}
+
+.btn-outline-accent:hover,
+.btn-check:checked + .btn-outline-accent,
+.btn-check:active + .btn-outline-accent,
+.btn-outline-accent:active,
+.btn-outline-accent.active,
+.btn-outline-accent.dropdown-toggle.show {
+  color: #fff !important;
+  background-color: $accent_primary;
+  border-color: $accent_primary;
+}
+.btn-check:focus + .btn-outline-accent, .btn-outline-accent:focus {
+  box-shadow: 0 0 0 0.05rem rgba(13, 110, 253, 0.5);
+}
+.btn-check:checked + .btn-outline-accent:focus, .btn-check:active + .btn-outline-accent:focus, .btn-outline-accent:active:focus, .btn-outline-accent.active:focus, .btn-outline-accent.dropdown-toggle.show:focus {
+  box-shadow: 0 0 0 0.05rem rgba(13, 110, 253, 0.5);
+}
+.btn-outline-accent:disabled, .btn-outline-accent.disabled {
+  color: $accent_primary;
+  background-color: transparent;
+}
+
+.sl-spacer {
+    height: 60px;
+}
+
+/**
+ * -------------------------------------------------------------------------------------
+ * Navigation
+ * -------------------------------------------------------------------------------------
+ */
+
+#sl-main-navbar {
+    height: 100px;
+}
+
+.sl-navbar {
+    background-color: #f1f1f1;
+}
+
+.sl-brand {
+    text-align: center;
+    margin-top: 8px;
+    line-height: 1.7rem;
+    font-size: 2.1rem;
+
+    span {
+        display: block;
+        font-size: 0.9rem;
+    }
+}
+
+#sl-main-nav {
+
+    li {
+        a {
+            padding-top: 0.7rem;
+            padding-bottom: 0.7rem;
+            font-size: 0.9rem;
+        }
+
+        &.nav-item-text {
+
+            a {
+                // color: rgba(0,0,0,.55);
+                padding-left: 0.8rem;
+                padding-right: 0.8rem;
+
+            }
+        }
+
+        &.nav-item-btn {
+            margin-left: 0.8rem;
+
+            a {
+                border-radius: 5rem;
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+        }
+    }
+
+
+}
+
+
+/**
+ * -------------------------------------------------------------------------------------
+ * Hero
+ * -------------------------------------------------------------------------------------
+ */
+
+.sl-hero {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+
+    margin-top: -100px;
+    padding: 80px 0 100px 0;
+    // background: url(../img/ali-arif-soydas-unsplash.jpg) no-repeat center center fixed;
+    background: url(../img/anzar-shah-cQVCIDPp8zU-unsplash.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.sl-hero-message {
+    background-color: rgba(0,0,0,0.4);
+    color: #f1f1f1;
+    padding: 80px 60px;
+    margin-top: 100px;
+
+    &> h1 {
+        margin-bottom: 20px;
+    }
+}
+
+.sl-hero-btn {
+    margin-top: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 0.9rem 2rem;
+    border-color: $accent_secondary;
+
+    &:focus,
+    &:active,
+    &:active:focus {
+      color: #fff;
+      background-color: #1c1f23;
+      border-color: transparent;
+      box-shadow: 0 0 0 .15rem rgba(66,70,73,.5)
+    }
+}
+
+/**
+ * -------------------------------------------------------------------------------------
+ * Components
+ * -------------------------------------------------------------------------------------
+ */
+
+/**
+ * Sections
+ */
+.sl-section {
+    background-color: #fff;
+
+    .container {
+        padding: 80px 0;
+        border-bottom: 2px solid #efefef;
+    }
+
+    .sl-section-heading {
+        margin-bottom: 40px;
+    }
+}
+
+/**
+ * Phases
+ */
+.sl-phases-list {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+
+    &> li {
+        margin-bottom: 10px;
+
+        ul {
+            padding-left: 0;
+            margin: 10px 0 15px 0;
+        }
+
+        li {
+            list-style-type: disc;
+        }
+    }
+}
+
+/**
+ * Location
+ */
+.sl-location-list {
+    padding-left: 0;
+}
+
+/**
+ * Donate
+ */
+.sl-donate {
+    background-color: #dfdfdf;
+    background-color: #333;
+    color: #fff;
+
+    .container {
+        border-bottom: 0;
+    }
+}
+
+.sl-account-details {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 22px;
+
+    &> li {
+        margin-bottom: 7px;
+    }
+}
+
+.sl-donate-email {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 1.1rem;
+}
+
+.sl-quote {
+    border-left: 10px solid #ccc;
+    margin: 0 10px 1rem 0;
+    padding: 0 30px;
+    font-size: 1.5rem;
+    quotes: "\201C""\201D";
+    // quotes: "“" "”";
+
+    &:before {
+        color: #ccc;
+        content: open-quote;
+        // content: "❝";
+        font-size: 3em;
+        line-height: 0.1em;
+        margin-right: 0.12em;
+        vertical-align: -0.4em;
+    }
+    &:after {
+        color: #ccc;
+        content: close-quote;
+        font-size: 3em;
+        line-height: 0.1em;
+        margin-left: 0.12em;
+        vertical-align: -0.4em;
+    }
+
+    p {
+        display: inline;
+    }
+}
+
+/**
+ * Progress
+ */
+
+.sl-progress {
+    background-color: #333;
+    color: #fff;
+
+    .container {
+        padding: 60px 0;
+        border-bottom: 0;
+    }
+}
+
+.sl-donate-numbers {
+
+    .sl-raised-number {
+        font-size: 2.6rem;
+        font-weight: bold;
+        color: $accent_primary;
+    }
+}
+
+.sl-donate-progress {
+    height: 20px;
+    margin-top: 20px;
+
+    .progress-bar {
+        background-color: $accent_primary;
+    }
+}
+
+
+/**
+ * -------------------------------------------------------------------------------------
+ * Footer
+ * -------------------------------------------------------------------------------------
+ */
+
+.sl-footer {
+    padding: 30px 0;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+/**
+ * -------------------------------------------------------------------------------------
+ * Images (Lightbox and Slider)
+ * -------------------------------------------------------------------------------------
+ */
+.sl-lightbox-link,
+.sl-lightbox-container a {
+    cursor: zoom-in;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+.carousel-control-prev {
+    left: -100px;
+}
+.carousel-control-next {
+    right: -100px;
+}
+.carousel-indicators {
+    bottom: -60px;
+}
+
+#sl-design-slider {
+
+    .carousel-inner img {
+        width: 100%;
+    }
+}
+
+
+/**
+ * -------------------------------------------------------------------------------------
+ * Responsive
+ * -------------------------------------------------------------------------------------
+ */
+
+@media (max-width: 991.98px) {
+
+    /**
+     * General
+     */
+    body {
+        font-size: 0.95rem;
+    }
+
+    p {
+        margin-bottom: 0.7rem;
+    }
+    .sl-footer {
+        padding: 20px 0;
+    }
+
+    .sl-center-small {
+        text-align: center;
+    }
+
+    .sl-spacer {
+        height: 30px;
+    }
+
+    .sl-navbar {
+        padding: 20px;
+    }
+
+    #sl-main-nav li.nav-item-btn a {
+        width: 200px;
+    }
+
+    .sl-hero-message {
+        padding: 60px 40px;
+        margin-top: 80px;
+    }
+
+    .sl-hero-message {
+        padding: 60px 40px;
+    }
+
+    .sl-hero-btn {
+        margin-top: 12px;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        padding: 0.9rem 1.5rem;
+        border-color: $accent_secondary;
+
+        &:focus,
+        &:active,
+        &:active:focus {
+          color: #fff;
+          background-color: #1c1f23;
+          border-color: transparent;
+          box-shadow: 0 0 0 .15rem rgba(66,70,73,.5)
+        }
+    }
+
+
+    /**
+     * Section
+     */
+    .sl-section {
+        .container {
+            padding: 50px 0;
+        }
+
+        .sl-section-heading {
+            margin-bottom: 22px;
+        }
+    }
+
+    /**
+     * Location
+     */
+    .sl-location-list {
+        padding-left: 16px;
+    }
+
+    /**
+     * Carousel
+     */
+    .carousel-control-prev {
+        left: -40px;
+    }
+    .carousel-control-next {
+        right: -40px;
+    }
+    .carousel-indicators {
+        bottom: -40px;
+    }
+
+
+    /**
+     * Donate
+     */
+    .sl-account-details {
+        margin-top: 18px;
+        margin-bottom: 1.7rem;
+
+        &> li {
+            margin-bottom: 5px;
+        }
+    }
+
+    .sl-donate-email {
+        margin-top: 6px;
+        font-size: 0.9rem;
+    }
+
+    /**
+     * Progress
+     */
+
+    .sl-progress {
+        .container {
+            padding: 30px 0;
+            border-bottom: 0;
+        }
+    }
+
+    .sl-donate-numbers {
+
+        .sl-raised-number {
+            font-size: 2rem;
+        }
+    }
+
+    .sl-donate-progress {
+        height: 16px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .sl-quote {
+        border-left: none;
+        margin: 0;
+        padding: 0;
+        font-size: 1.1rem;
+
+        &:before {
+            font-size: 2em;
+            line-height: 0.1em;
+            margin-right: 0.06em;
+            vertical-align: -0.32em;
+        }
+        &:after {
+            font-size: 2em;
+            line-height: 0.1em;
+            margin-left: 0.06em;
+            vertical-align: -0.32em;
+        }
+
+        p {
+            display: inline;
+        }
+    }
+
+    .sl-quote-reference {
+        display: inline-block;
+        margin: 10px 0 24px 0;
+    }
+
+
+
+
+}
+
+@media (max-width: 480px) {
+
+
+}
